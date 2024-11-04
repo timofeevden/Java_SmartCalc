@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartcalc.view.ViewController">
+
+    <Button id="buttonPow" fx:id="buttonPow" layoutX="15.0" layoutY="169.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="^" />
+    <TextArea id="textAreaExpression" fx:id="textAreaExpression" layoutX="15.0" layoutY="14.0" prefHeight="105.0" prefWidth="215.0" wrapText="true" />
+	<Label id="labelResult" fx:id="labelResult" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="14.0" layoutY="124.0" prefHeight="35.0" prefWidth="215.0" text="result" />
+   <Button id="buttonBracketsOpen" fx:id="buttonBracketsOpen" layoutX="70.0" layoutY="169.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="(" />
+   <Button id="buttonBracketsClose" fx:id="buttonBracketsClose" layoutX="125.0" layoutY="169.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text=")" />
+   <Button id="buttonDiv" fx:id="buttonDiv" layoutX="180.0" layoutY="169.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="/" />
+   <Button id="button7" fx:id="button7" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="7" />
+   <Button id="button8" fx:id="button8" layoutX="70.0" layoutY="224.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="8" />
+   <Button id="button9" fx:id="button9" layoutX="125.0" layoutY="224.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="9" />
+   <Button id="buttonMult" fx:id="buttonMult" layoutX="180.0" layoutY="224.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="*" />
+   <Button id="button4" fx:id="button4" layoutX="15.0" layoutY="279.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="4" />
+   <Button id="button5" fx:id="button5" layoutX="70.0" layoutY="279.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="5" />
+   <Button id="button6" fx:id="button6" layoutX="125.0" layoutY="279.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="6" />
+   <Button id="buttonMinus" fx:id="buttonMinus" layoutX="180.0" layoutY="279.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="-" />
+   <Button id="button1" fx:id="button1" layoutX="15.0" layoutY="334.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="1" />
+   <Button id="button2" fx:id="button2" layoutX="70.0" layoutY="334.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="2" />
+   <Button id="button3" fx:id="button3" layoutX="125.0" layoutY="334.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="3" />
+   <Button id="buttonPlus" fx:id="buttonPlus" layoutX="180.0" layoutY="334.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="+" />
+   <Button id="button0" fx:id="button0" layoutX="15.0" layoutY="389.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="105.0" text="0" />
+   <Button id="buttonPoint" fx:id="buttonPoint" layoutX="125.0" layoutY="389.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="." />
+   <Button id="buttonResult" fx:id="buttonResult" layoutX="180.0" layoutY="389.0" mnemonicParsing="false" onAction="#calculate" prefHeight="50.0" prefWidth="50.0" text="=" />
+   <Button id="buttonC" fx:id="buttonC" layoutX="238.0" layoutY="14.0" mnemonicParsing="false" onAction="#clearOne" prefHeight="50.0" prefWidth="50.0" text="C" />
+   <Button id="buttonAC" fx:id="buttonAC" layoutX="238.0" layoutY="69.0" mnemonicParsing="false" onAction="#allClear" prefHeight="50.0" prefWidth="50.0" text="AC" />
+   <Button id="buttonSqrt" fx:id="buttonSqrt" layoutX="297.0" layoutY="169.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="sqrt" />
+   <Button id="buttonMod" fx:id="buttonMod" layoutX="352.0" layoutY="169.0" mnemonicParsing="false" onAction="#addOperation" prefHeight="50.0" prefWidth="50.0" text="mod" />
+   <Button id="buttonLg" fx:id="buttonLg" layoutX="297.0" layoutY="224.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="lg" />
+   <Button id="buttonLn" fx:id="buttonLn" layoutX="352.0" layoutY="224.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="ln" />
+   <Button id="buttonSin" fx:id="buttonSin" layoutX="297.0" layoutY="279.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="sin" />
+   <Button id="buttonAsin" fx:id="buttonAsin" layoutX="352.0" layoutY="279.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="asin" />
+   <Button id="buttonCos" fx:id="buttonCos" layoutX="297.0" layoutY="334.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="cos" />
+   <Button id="buttonAcos" fx:id="buttonAcos" layoutX="352.0" layoutY="334.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="acos" />
+   <Button id="buttonTan" fx:id="buttonTan" layoutX="297.0" layoutY="389.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="tan" />
+   <Button id="buttonAtan" fx:id="buttonAtan" layoutX="352.0" layoutY="389.0" mnemonicParsing="false" onAction="#addMathFunction" prefHeight="50.0" prefWidth="50.0" text="atan" />
+   <Button id="buttonPi" fx:id="buttonPi" layoutX="297.0" layoutY="112.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="Pi" />
+   <Button id="buttonX" fx:id="buttonX" layoutX="352.0" layoutY="112.0" mnemonicParsing="false" onAction="#addNumber" prefHeight="50.0" prefWidth="50.0" text="X" />
+   <Button id="buttonShowMenu" fx:id="buttonShowMenu" layoutX="238.0" layoutY="169.0" mnemonicParsing="false" onAction="#openMoreOptions" prefHeight="50.0" prefWidth="50.0" text="-&gt;" />
+   <Label layoutX="416.0" layoutY="81.0" prefHeight="25.0" prefWidth="33.0" text="X =" />
+   <Spinner id="spinnerX" fx:id="spinnerX" amountToStepBy="0.1" editable="true" initialValue="1.0" layoutX="440.0" layoutY="81.0" max="1000000.0" min="-1000000.0" prefHeight="25.0" prefWidth="87.0" />
+   <SplitMenuButton id="splitMenuHistory" fx:id="splitMenuHistory" layoutX="297.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" text="History">
+   </SplitMenuButton>
+   <Label layoutX="416.0" layoutY="122.0" prefHeight="25.0" prefWidth="58.0" text="Xmin =" />
+   <Spinner id="spinnerXmin" fx:id="spinnerXmin" amountToStepBy="5.0" editable="true" initialValue="-10.0" layoutX="462.0" layoutY="122.0" max="1000000.0" min="-1000000.0" prefHeight="25.0" prefWidth="65.0" />
+   <Label layoutX="416.0" layoutY="162.0" prefHeight="25.0" prefWidth="58.0" text="Xmax =" />
+   <Spinner id="spinnerXmax" fx:id="spinnerXmax" amountToStepBy="5.0" editable="true" initialValue="10.0" layoutX="462.0" layoutY="162.0" max="1000000.0" min="-1000000.0" prefHeight="25.0" prefWidth="65.0" />
+   <Label layoutX="416.0" layoutY="202.0" prefHeight="25.0" prefWidth="58.0" text="Ymin =" />
+   <Spinner id="spinnerYmin" fx:id="spinnerYmin" amountToStepBy="5.0" editable="true" initialValue="-10.0" layoutX="462.0" layoutY="202.0" max="1000000.0" min="-1000000.0" prefHeight="25.0" prefWidth="65.0" />
+   <Label layoutX="416.0" layoutY="242.0" prefHeight="25.0" prefWidth="58.0" text="Ymax =" />
+   <Spinner id="spinnerYmax" fx:id="spinnerYmax" amountToStepBy="5.0" editable="true" initialValue="10.0" layoutX="462.0" layoutY="242.0" max="1000000.0" min="-1000000.0" prefHeight="25.0" prefWidth="65.0" />
+   <Button id="buttonBuildGraph" fx:id="buttonBuildGraph" layoutX="416.0" layoutY="277.0" mnemonicParsing="false" onAction="#buildGraph" prefHeight="50.0" prefWidth="111.0" text="BuildGraph" />
+   <Label layoutX="297.0" layoutY="1.0" prefHeight="50.0" prefWidth="239.0" text="SmartCalc v.3.0" textFill="#3b3bc9">
+      <font>
+         <Font name="Britannic Bold" size="32.0" />
+      </font>
+   </Label>
+
+</Pane>
